@@ -1,0 +1,362 @@
+@media (max-width: 1024px) {
+  body {
+    padding: 1.7rem;
+  }
+  h1{
+    font-size: 30px;
+  }
+  h2{
+    font-size: 20px;
+  }
+  a.heading{
+    font-size: 30px;
+  }
+  a,p{
+    font-size: 17px;
+  }
+  .default-button{
+    bottom: 9px;
+    right: 8px;
+  }
+  .edit-main{
+    height: 300px;
+    width: 300px;
+  }
+  .logo{
+    height: 40px;
+    width: 40px;
+  }
+  .header{
+    height: 60px;
+  }
+  .main-content{
+    padding-top: 30px;
+  }
+  .edit-container{
+    padding-top:40px;
+  }
+  .footer{
+    height: 50px;
+  }
+  /* should only use below if will fit on phone screen without going to next line */
+  .sample-img{
+    padding-right: 20px;
+    width: 120px;
+    height: 120px;
+  }
+  .sample-img-final{
+    width: 120px;
+    height: 120px;
+  }
+  .error-image{
+    width: 170px;
+    height: 170px;
+  }
+  .sample-img:hover{
+    height: 140px;
+    width: 140px;
+  }
+  .sample-img-final:hover{
+    height: 140px;
+    width: 140px;
+  }
+  .edit-main-controls{
+    gap: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    padding: 1.2rem;
+    padding-bottom: 2rem;
+  }
+  .default-button{
+    bottom: 10px;
+    right: 10px;
+  }
+  .edit-main{
+    height: 500px;
+    width: 500px;
+  }
+  .logo{
+    height: 50px;
+    width: 50px;
+  }
+  .main-content{
+    padding-top: 45px;
+  }
+  .edit-container{
+    padding-top: 70px;
+  }
+  .header{
+    height: 70px;
+  }
+  .sample-img{
+    padding-right: 60px;
+    width: 150px;
+    height: 150px;
+  }
+  .sample-img-final{
+    width: 150px;
+    height: 150px;
+  }
+  .sample-img:hover{
+    height: 170px;
+    width: 170px;
+  }
+  .sample-img-final:hover{
+    height: 170px;
+    width: 170px;
+  }
+  .error-image{
+    width: 220px;
+    height: 220px;
+  }
+  .footer{
+    height: 52px;
+  }
+  .edit-main-controls{
+    gap: 10px;
+  }
+}
+#app {
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+#app.fade-out {
+  opacity: 0;
+}
+body {
+  transition: padding 0.25s ease-out;
+  visibility: hidden;
+}
+body.loaded{
+  visibility: visible;
+}
+h1, h2, p, a{
+  transition: font-size 0.25s ease-out;
+}
+.home{
+  margin: 0;
+  line-height: 1;
+}
+html.dark {
+  height: 100%;
+  width: 100%;
+  background-color: #222222;
+  color: #ffffff;
+}
+head.dark .faviconIMG{
+  filter: invert(1);
+}
+html.dark .logo{
+  filter: invert(1);
+}
+html.dark .theme-icon{
+  filter: invert(0);
+}
+html.dark a, html.dark p{
+  color: #ffffff;
+}
+html.dark .button-one{
+  background-color: #333333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+html.dark .button-one:hover {
+  background-color: #555555;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+html.dark .button-one:active {
+  background-color: #9e9e9e;
+}
+html.dark .header {
+  background: #3c3c3c;
+  box-shadow: 0 3px 5px rgba(235, 235, 235, 0.1);
+}
+html.dark .footer {
+  background: #3c3c3c;
+  box-shadow: 0 -3px 5px rgba(235, 235, 235, 0.1);
+}
+html.dark .sizeSelect{
+  background-color: #111111;
+  color: #ffffff;
+}
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #f0f0f0;
+}
+html, button {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+html.transition{
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+}
+a.transition, p.transition{
+  transition: color 0.25s ease-out;
+}
+.footerbutton{
+  font-size: 20px;
+}
+.logo{
+  filter: invert(0);
+  transition: width 0.25s ease-out, height 0.25s ease-out;
+}
+a{
+  text-decoration: none;
+  color: #000000;
+}
+.theme-icon{
+  filter: invert(1);
+}
+.edit-main{
+  touch-action: none;
+  aspect-ratio: 1 / 1;
+  order: 1;
+}
+.edit-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: padding-top 0.25s ease-out;
+  touch-action: none;
+}
+.draw-wrapper{
+  touch-action: none;
+}
+.button-one{
+  background-color: #777777;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 16px;
+  flex: 0 0 auto;
+  transition: color 0.25s ease-out, background-color 0.25s ease-out;
+}
+.button-one:hover {
+  background-color: #999999;
+  transition: background-color 0.1s ease-out;
+}
+.button-one:active {
+  background-color: #444444;
+  transition: background-color 0.1s ease-out;
+}
+.button-one:not(:hover){
+  transition: background-color 0.1s ease-out;
+}
+.faviconIMG{
+  filter: invert(0);
+}
+div{
+  align-items: center;
+}
+.header{
+  display: flex;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f0f0f0;
+  width: 100%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  z-index: 2;
+  justify-content: center;
+  /* may need to fix this and footer if code is modified to allow transitions. right now it works */
+  transition: background 0.25s ease-out, box-shadow 0.25s ease-out, height 0.25s ease-out;
+}
+.footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #f0f0f0;
+  width: 100%;
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  transition: background 0.25s ease-out, box-shadow 0.25s ease-out, height 0.25s ease-out;
+}
+.main-content{
+  text-align: center;
+  padding-bottom: 20px;
+  transition: padding-top 0.25s ease-out;
+}
+.default-button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  transition: right 0.25s ease-out, bottom 0.25s ease-out;
+}
+.transparent-button{
+  border-radius: 5px;
+  background: none;
+  border: none;
+  z-index: 0;
+  cursor: pointer;
+  transition: background 0.125s ease-out;
+} 
+.focus-visible {
+  background-color: #c8c8c8;
+  transition: background-color 0.125s ease-out;
+}
+.focus-visible.dark {
+  background-color: #444444;
+}
+.color{
+  background: transparent;
+  border: none;
+  padding: 2px 2px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.edit-main-controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 5px;
+  transition: gap 0.25s ease-out;
+}
+.sample-img{
+  transition: height 0.2s ease-out, width 0.2s ease-out, padding-right 0.25s ease-out;
+}
+.sample-img-final{
+  transition: height 0.2s ease-out, width 0.2s ease-out;
+}
+.error-image{
+  transition: height 0.2s ease-out, width 0.2s ease-out;
+}
+.samples{
+  text-align: center;
+  padding-bottom: 60px;
+}
+.sizeSelect{
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  font-size:16px;
+}
+.sizeSelect.transition{
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*firefox*/
+input[type=number] {
+  -moz-appearance: textfield;
+}
