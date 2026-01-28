@@ -345,6 +345,10 @@ window.initDraw = function initDraw() {
       event.preventDefault();
       selectTool("fill");
       manualSelection = true;
+    } else if (ctrlKey && event.key.toLowerCase() === "i" && isPainting === false) {
+      event.preventDefault();
+      selectTool("pick");
+      manualSelection = true;
     }
   };
   document.addEventListener("keydown", keyHandler);
