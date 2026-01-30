@@ -93,18 +93,19 @@ window.initDraw = function initDraw() {
 
   function pickColor(x, y) {
     const pixel = ctx.getImageData(x, y, 1, 1).data;
-
-    if (pixel[3] === 0) return;
-
-    const hex = rgbToHex(pixel[0], pixel[1], pixel[2]);
-
-    ctx.strokeStyle = hex;
-
+    const hex = rgbToHex(pixel[0], pixel[1], pixel[2], pixel[3]);
     const colorInput = document.getElementById("stroke");
-    if (colorInput) colorInput.value = hex;
+
+    if (pixel[3] === 0 && backgroundMode !== "transparent") {
+      ctx.strokeStyle = "#ffffff"; // ALLOW USER INPUT HERE IN MENU UPDATE
+      if (colorInput) colorInput.value = "#ffffff";
+    } else {
+      ctx.strokeStyle = hex;
+      if (colorInput) colorInput.value = hex;
+    }
   }
 
-  function rgbToHex(r, g, b) {
+  function rgbToHex(r, g, b, a) {
     return (
       "#" +
       [r, g, b]
@@ -201,6 +202,7 @@ window.initDraw = function initDraw() {
     const touch = e.touches ? e.touches[0] : e;
     return { x: touch.clientX - rect.left, y: touch.clientY - rect.top };
   }
+  
   function isPenEraser(e) {
     // eraser bit = 32
     return e.pointerType === "pen" && (e.buttons & 32) !== 0;
@@ -238,7 +240,6 @@ window.initDraw = function initDraw() {
   }
 
   let lastMode = mode; // track the last active tool
-
   function mainDrawLogic(e) {
     if (!isPainting) return;
     e.preventDefault();
@@ -294,14 +295,13 @@ window.initDraw = function initDraw() {
     if (val > 99) val = 99;
     brushSize.value = val;
   });
-
   // mouse/touch
   canvas.addEventListener("pointerdown", start);
   canvas.addEventListener("pointerdown", start);
   canvas.addEventListener("pointermove", mainDrawLogic);
   canvas.addEventListener("pointerup", end);
   canvas.addEventListener("pointerleave", end);
-  canvas.addEventListener("mousemove", cursorSet);
+  canvas.addEventListener("pointermove", cursorSet);
 
   // buttons
   undoBtn.addEventListener("click", undo);
