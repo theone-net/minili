@@ -325,8 +325,13 @@ div{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-left: 5px;
   transition: gap 0.25s ease-out;
+}
+.edit-main-controls.left{
+  padding-right: 5px;
+}
+.edit-main-controls.right{
+  padding-left: 5px;
 }
 .sample-img{
   transition: height 0.2s ease-out, width 0.2s ease-out, padding-right 0.25s ease-out;

@@ -64,6 +64,7 @@ async function render() {
 
   if (!firstRender) {
     app.classList.remove("fade-out");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   firstRender = false;
