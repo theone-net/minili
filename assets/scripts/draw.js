@@ -137,7 +137,7 @@ window.initDraw = function initDraw() {
     // If already the same color, do nothing
     if (colorsMatch(targetColor, fill, 0)) return;
 
-    const tolerance = 20;
+    const tolerance = 30;
     const visited = new Uint8Array(width * height);
     const queue = [[startX, startY]];
 
@@ -184,7 +184,7 @@ window.initDraw = function initDraw() {
     ];
   }
 
-  function colorsMatch(a, b, tolerance = 0) {
+  function colorsMatch(a, b, tolerance) {
     return (
       Math.abs(a[0] - b[0]) <= tolerance &&
       Math.abs(a[1] - b[1]) <= tolerance &&
